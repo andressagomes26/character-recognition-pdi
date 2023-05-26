@@ -14,7 +14,7 @@ Para este projeto serão utilizados algoritmos de processamento de imagens com o
 - Processamento Digital de Imagens (PDI);
 - Visão Computacional;
 - Deep Learning;
-- Reconhecimento ótico de caracteres (OCR)
+- Reconhecimento ótico de caracteres (OCR).
 
 ## Arquivos
 Os arquivos desenvolvidos durante a resolução do projeto são listados a seguir:
@@ -49,7 +49,7 @@ Para a extração de caracteres utilizando Pytesseract destacou-se as regiões d
 
 O Pytesseract conseguiu reconhecer bem os nomes dos produtos, entretanto, para os numerais, a técnica não apresentou resultados interessantes. Ademais, para melhorar o resultado, destacou-se apenas o texto desejado. O resultado do Pytesseract para o texto em destaque:
 
-![image](https://github.com/andressagomes26/character-recognition-pdi/assets/60404990/8c67acbf-977d-496c-901b-64099be78821)
+![WhatsApp Image 2023-05-26 at 09 09 13](https://github.com/andressagomes26/character-recognition-pdi/assets/60404990/0fe0e057-d65f-45d9-a0f1-d7ff84bdd80e)
 
 Em seguida, para realizar a extração dos dígitos dos preços dos produtos texto realizou-se o treinamento de um modelo CNN. Foi necessário adaptar as imagens enviadas para rede neural, pois, a rede será foi treinada com a base de dados MNIST. Logo, é interessante que a imagem de teste possua um formato semelhante, ou seja, a área de interesse (numeral) branca e o fundo preto. Assim, a imagem foi transformada para escala de cinza, suavizada, detectou-se as bordas com o filtro de Canny e por fim, aplicou-se as operações morfológicas de dilatação e erosão, resultando na seguinte imagem:
 
@@ -57,7 +57,7 @@ Em seguida, para realizar a extração dos dígitos dos preços dos produtos tex
 
 Por fim, a rede CNN exibiu os seguintes resultados para reconhecimento dos dígitos:
  
-![image](https://github.com/andressagomes26/character-recognition-pdi/assets/60404990/88e65b3d-2f48-438e-8376-a918a22179f4)
+![WhatsApp Image 2023-05-26 at 09 11 28](https://github.com/andressagomes26/character-recognition-pdi/assets/60404990/8bbfd518-c56c-4f72-81ee-e520f3f61f2d)
 
 ## Autores
 - Andressa Gomes Moreira - andressagomes@alu.ufc.br.
