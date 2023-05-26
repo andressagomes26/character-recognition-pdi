@@ -45,7 +45,7 @@ Ademais, as imagens utilizadas para extração de caracteres com Pytesseract e C
 
 Para a extração de caracteres utilizando Pytesseract destacou-se as regiões de interesse da imagem, converteu a imagem para tons de cinza, suavizou a imagem e por fim realizou-se a binarização de Otsu. 
 
-![imagem_resultado_processamento](https://github.com/andressagomes26/character-recognition-pdi/assets/60404990/895fe037-feab-4f3d-939c-e225a139696f)
+<img src="https://github.com/andressagomes26/character-recognition-pdi/blob/main/notebooks/imagens/imagem_resultado_processamento.jpg">
 
 O Pytesseract conseguiu reconhecer bem os nomes dos produtos, entretanto, para os numerais, a técnica não apresentou resultados interessantes. Ademais, para melhorar o resultado, destacou-se apenas o texto desejado. O resultado do Pytesseract para o texto em destaque:
 
@@ -53,7 +53,7 @@ O Pytesseract conseguiu reconhecer bem os nomes dos produtos, entretanto, para o
 
 Em seguida, para realizar a extração dos dígitos dos preços dos produtos texto realizou-se o treinamento de um modelo CNN. Foi necessário adaptar as imagens enviadas para rede neural, pois, a rede será foi treinada com a base de dados MNIST. Logo, é interessante que a imagem de teste possua um formato semelhante, ou seja, a área de interesse (numeral) branca e o fundo preto. Assim, a imagem foi transformada para escala de cinza, suavizada, detectou-se as bordas com o filtro de Canny e por fim, aplicou-se as operações morfológicas de dilatação e erosão, resultando na seguinte imagem:
 
-![image](https://github.com/andressagomes26/character-recognition-pdi/assets/60404990/c70f1728-9093-4b80-8a49-69296694970e)
+<img src='https://github.com/andressagomes26/character-recognition-pdi/blob/main/notebooks/imagens/img_cnn_erosao.jpg'>
 
 Por fim, a rede CNN exibiu os seguintes resultados para reconhecimento dos dígitos:
  
